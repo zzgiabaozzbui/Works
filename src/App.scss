@@ -1,0 +1,25 @@
+@use "./scss/" as *;
+
+.App {
+  text-align: center;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html{
+  font-size: 100%;
+
+  @include tablet{
+    font-size: 80%;
+  }
+
+  @include mobile{
+    font-size: 60%;
+  }
+}

@@ -1,0 +1,59 @@
+@use "../../scss/" as *;
+
+.tasks{
+    background-color:#fff;
+    border-radius: $border-radius;
+    height:45%;
+    border-radius: $border-radius;
+    margin: 10px 30px;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    @include flex(center,center);
+    flex-direction: column;
+    background-color: #fff;
+
+    &__title{
+        &__Todo{
+            background: linear-gradient(to bottom, #7a53ff,#6da4ff);
+            background-clip: text; // gán backgound gradient cho text( chìm text dưới background)
+            color: transparent;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: "Helvetica Neue",Helvetica,Arial;
+
+        }
+
+        &__List{
+            font-family: "Helvetica Neue",Helvetica,Arial;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    &__sort{
+        width: 100%;
+        font-family: "Helvetica Neue",Helvetica,Arial;
+        font-size: 16px;
+        font-weight: bold;
+        @include flex(center,flex-end);
+
+        & > div > span{
+            color: #6e6c6c;
+        }
+        
+    }
+
+    &__content{
+        width: 80%;
+        & > ul {
+            width: 100%;
+            padding-left: 0px;
+        }
+        & > ul > li{
+            list-style: none;
+        }
+    }
+}
